@@ -12,7 +12,7 @@ This is a **two-stage research prototype** developed from urban tree inventory r
 
 ---
 
-## ✨ What the project does
+## What the project does
 
 ```mermaid
 flowchart LR
@@ -72,7 +72,7 @@ Results below are taken from **saved notebook outputs from the original experime
 
 </details>
 
-## 🌎 Data sources & preparation
+## Data sources & preparation
 
 | Source | Contribution | Method |
 |---|---|---|
@@ -87,7 +87,7 @@ The data-collection notebook contains code that saves `env.csv`, `soil.csv`, and
 
 The **full enriched CSV (~412 MB)** is intentionally excluded from GitHub. See [data/README.md](data/README.md) for details. The repo includes a small `data/sample_plants.csv` for inspection and quick tests only.
 
-## 🗂️ Repository structure
+## Repository structure
 
 ```text
 plant-selection-ml/
@@ -106,7 +106,7 @@ plant-selection-ml/
 └── LICENSE-NOTE.md
 ```
 
-## 🚀 Quick start
+## Quick start
 
 Requires Python 3.10+ (suggested). Notebook dependencies may need adjustment depending on your environment and library versions.
 
@@ -131,7 +131,7 @@ export PLANTS_DATA_PATH=/absolute/path/to/my_plants_data.csv
 
 **Note:** `01_data_collection.ipynb` is an original, Colab-oriented research notebook (Google Drive paths, interactive upload, external API calls). It is retained to show methodology, not presented as a standalone automated ETL script.
 
-## 🔬 Methodological caveats
+## Methodological caveats
 
 - The label describes **observed current status / mortality proxy**, not verified survival after a future planting event. Calling it a *prospective survival probability* would overstate the evidence.
 - Environmental variables are aggregated at **state-level or representative coordinates** in parts of the pipeline, which limits site-specific claims.
@@ -139,14 +139,14 @@ export PLANTS_DATA_PATH=/absolute/path/to/my_plants_data.csv
 - The recommendation stage is a **prototype**: semantic matching and model ranking were demonstrated, not externally validated with landscape designers or real plantings.
 - Current notebooks include some Colab assumptions and original saved outputs; figures report the original run rather than a fresh reproducibility audit.
 
-## 🛠️ Tech stack
+## Tech stack
 
 **Data:** Python, pandas, NumPy, Requests, BeautifulSoup, Open-Meteo, SoilGrids  
 **ML:** scikit-learn, XGBoost, PCA, SHAP  
 **NLP:** Sentence-Transformers (`all-MiniLM-L6-v2`), PyTorch  
 **Visualization:** Matplotlib, Seaborn, Jupyter
 
-## 📎 Presentation & attribution
+## Presentation & attribution
 
 The [project presentation](presentation/Plant-Selection-ML.pptx) summarizes motivation, data collection, model comparisons, feature analysis and example recommendations. Please review redistribution rights for any third-party images before publishing the deck publicly.
 
